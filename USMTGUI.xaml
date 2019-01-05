@@ -1,0 +1,268 @@
+<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        Title="Migration Assistant by Nick Rodriguez" Height="550" Width="1000" MinWidth="1000" MinHeight="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl Margin="10,10,0,10" Grid.Column="0">
+            <TabItem Header="Old Computer">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <GroupBox Header="Computer Info" Height="110" Margin="10,10,10,5" BorderBrush="Black" Grid.Row="0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Old Computer" VerticalAlignment="Center" Margin="10,0,10,0" Grid.Column="0" Grid.Row="1"/>
+                            <Label Content="New Computer" VerticalAlignment="Center" Margin="10,0,10,0" Grid.Column="0" Grid.Row="2"/>
+                            <Label Content="Computer Name" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0"/>
+                            <Label Content="IP Address" VerticalAlignment="Center" Grid.Column="2" Grid.Row="0"/>
+                            <TextBox Text="ANEXAMPLENAME" VerticalAlignment="Center" Margin="0,0,2,0" Grid.Column="1" Grid.Row="1"/>
+                            <TextBox VerticalAlignment="Center" Margin="0,0,2,0" Grid.Column="1" Grid.Row="2"/>
+                            <TextBox Text="192.168.234.244" VerticalAlignment="Center" Margin="2,0,0,0" Grid.Column="2" Grid.Row="1"/>
+                            <TextBox VerticalAlignment="Center" Margin="2,0,0,0" Grid.Column="2" Grid.Row="2"/>
+                            <Button Content="Test Connection" Margin="10,0,10,0" VerticalAlignment="Center" Grid.Column="3" Grid.Row="1"/>
+                            <CheckBox Content="Connected" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="2"/>
+                        </Grid>
+                    </GroupBox>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <GroupBox Header="Data to Include" HorizontalAlignment="Stretch" Height="162" Margin="10,5,5,5" VerticalAlignment="Top" BorderBrush="Black" Grid.Row="0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="6*" />
+                                        <ColumnDefinition Width="5*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+
+                                    <CheckBox Content="AppData" Margin="10,0,0,0" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0"/>
+                                    <CheckBox Content="Local AppData" Margin="10,0,0,0" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1"/>
+                                    <CheckBox Content="Printers" Margin="10,0,0,0" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2"/>
+                                    <CheckBox Content="Recycle Bin" Margin="10,0,0,0" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3"/>
+                                    <CheckBox Content="My Documents" Margin="10,0,0,0" VerticalAlignment="Center" Grid.Column="0" Grid.Row="4"/>
+                                    <CheckBox Content="Wallpapers" Margin="10,0,0,0" VerticalAlignment="Center" Grid.Column="0" Grid.Row="5"/>
+
+                                    <CheckBox Content="Downloads" Margin="5,0,5,0" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0" />
+                                    <CheckBox Content="Favorites" Margin="5,0,5,0" VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" />
+                                    <CheckBox Content="My Music" Margin="5,0,5,0" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2"/>
+                                    <CheckBox Content="My Pictures" Margin="5,0,5,0" VerticalAlignment="Center" Grid.Column="1" Grid.Row="3"/>
+                                    <CheckBox Content="My video" Margin="5,0,5,0" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4"/>
+                                    <CheckBox Content="Desktop" Margin="5,0,5,0" VerticalAlignment="Center" Grid.Column="1" Grid.Row="5"/>
+                                </Grid>
+                            </GroupBox>
+                            <GroupBox Header="Extra Directories to Include" Margin="10,5,5,10" BorderBrush="Black" Grid.Row="1">
+                                <Grid>
+                                    <DataGrid />
+                                    <Button Content="-" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="26" Height="26" FontSize="16"/>
+                                    <Button Content="+" Margin="26,0,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="26" Height="26" FontSize="16"/>
+                                </Grid>
+                            </GroupBox>
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <GroupBox Header="Save State Destination" Height="100" Margin="5,5,10,5" BorderBrush="Black" Grid.Row="0">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <CheckBox Content="Save On New Computer" Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0"/>
+                                    <TextBox Margin="10,0,10,0" TextWrapping="Wrap" Text="c:\Temp\MigrationStore" VerticalAlignment="Center" Grid.Row="1"/>
+                                    <Grid Grid.Row="2">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Button Content="Change" Margin="10,0,5,0" VerticalAlignment="Center" Grid.Column="0"/>
+                                        <Button Content="Reset" Margin="5,0,10,0" VerticalAlignment="Center" Grid.Column="1"/>
+                                    </Grid>
+                                </Grid>
+                            </GroupBox>
+                            <GroupBox Header="Profile Selection" Height="105" Margin="5,5,10,5" BorderBrush="Black" Grid.Row="1">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="2*"/>
+                                    </Grid.RowDefinitions>
+                                    <Button Content="Button" Margin="10,0,10,0" VerticalAlignment="Center" Grid.Row="0"/>
+                                    <Grid Grid.Row="1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="5*"/>
+                                            <ColumnDefinition Width="1*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <CheckBox Grid.Column="0" VerticalAlignment="Center" Margin="10,0,0,0">
+                                            <StackPanel>
+                                                <TextBlock TextWrapping="WrapWithOverflow">Migrate all profiles logged into within this amount of days:</TextBlock>
+                                            </StackPanel>
+                                        </CheckBox>
+                                        <TextBox Text="90" Margin="5,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1"/>
+                                    </Grid>
+                                </Grid>
+                            </GroupBox>
+                            <Button Content="Custom XML(s)" Margin="5,5,10,5" Grid.Row="2"/>
+                            <CheckBox Content="Encrypt Captured Data" Margin="5,5,10,5" Grid.Row="3"/>
+                            <CheckBox Content="Uncompressed Storage" Margin="5,5,10,5" Grid.Row="4"/>
+                            <Button Content="Migrate" FontWeight="Bold" FontSize="18" Margin="5,5,10,10" Grid.Row="5"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="New Computer">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <GroupBox Header="Computer Info" Height="110" Margin="10,10,10,5" BorderBrush="Black" Grid.Row="0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Old Computer" VerticalAlignment="Center" Margin="10,0,10,0" Grid.Column="0" Grid.Row="1"/>
+                            <Label Content="New Computer" VerticalAlignment="Center" Margin="10,0,10,0" Grid.Column="0" Grid.Row="2"/>
+                            <Label Content="Computer Name" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0"/>
+                            <Label Content="IP Address" VerticalAlignment="Center" Grid.Column="2" Grid.Row="0"/>
+                            <TextBox VerticalAlignment="Center" Margin="0,0,2,0" Grid.Column="1" Grid.Row="1"/>
+                            <TextBox VerticalAlignment="Center" Margin="0,0,2,0" Grid.Column="1" Grid.Row="2"/>
+                            <TextBox VerticalAlignment="Center" Margin="2,0,0,0" Grid.Column="2" Grid.Row="1"/>
+                            <TextBox VerticalAlignment="Center" Margin="2,0,0,0" Grid.Column="2" Grid.Row="2"/>
+                            <Button Content="Test Connection" Margin="10,0,10,0" VerticalAlignment="Center" Grid.Column="3" Grid.Row="1"/>
+                            <CheckBox Content="Connected" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="2"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Save State Destination" Height="Auto" Margin="5,5,10,5" BorderBrush="Black" Grid.Row="1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <CheckBox Content="Save State Task Completed" Margin="10,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0"/>
+                            <CheckBox Content="Save Data Was Encrypted" Margin="10,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1"/>
+                            <TextBox Margin="10,0,10,0" Text="c:\Temp\MigrationStore" VerticalAlignment="Center" Grid.Row="2"/>
+                            <Grid Grid.Row="3">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Content="Change" Margin="10,0,5,0" VerticalAlignment="Center" Grid.Column="0"/>
+                                <Button Content="Reset" Margin="5,0,5,0" VerticalAlignment="Center" Grid.Column="1"/>
+                                <Button Content="Search" Margin="5,0,10,0" VerticalAlignment="Center" Grid.Column="2"/>
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+                    <Button Content="Migrate" FontWeight="Bold" FontSize="18" Margin="5,5,10,10" Grid.Row="4"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Email Settings">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <CheckBox Content="Enabled" Margin="10,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0"/>
+                    <GroupBox Header="Save State Destination" Height="Auto" Margin="5,5,10,5" BorderBrush="Black" Grid.Row="1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TextBox Margin="10,5,10,5" Text="smtp.domail.local" VerticalAlignment="Center" Grid.Row="0"/>
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Content="Test Connection" Margin="10,0,5,0" VerticalAlignment="Center" Grid.Column="0"/>
+                                <CheckBox Content="Reachable" Margin="5,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1"/>
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Email Sender" Height="Auto" Margin="5,5,10,5" BorderBrush="Black" Grid.Row="2">
+                        <Grid>
+                            <TextBox Margin="10,5,10,5" Text="MigrationAlert@compay.com" VerticalAlignment="Center"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Email Recipients" Margin="10,5,5,5" BorderBrush="Black" Grid.Row="3">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <DataGrid/>
+                                <Button Content="-" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="26" Height="26" FontSize="16"/>
+                                <Button Content="+" Margin="26,0,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="26" Height="26" FontSize="16"/>
+                            </Grid>
+                            <TextBox Margin="0,5,0,5" Text="Recipient@to.Add" VerticalAlignment="Center" Grid.Row="1"/>
+                        </Grid>
+                    </GroupBox>
+                    <Button Content="Test Email" FontWeight="Bold" FontSize="16" Height="40" Margin="10,5,10,10" Grid.Row="4"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Scripts">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+        <RichTextBox Name="LogTextBox" Margin="0,33,10,10" FontFamily="Consolas" Background="Black" Foreground="White" Grid.Column="1" IsReadOnly="True">
+
+        </RichTextBox>
+    </Grid>
+
+
+</Window>
+
