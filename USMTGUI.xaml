@@ -30,12 +30,12 @@
                             <Label Content="New Computer" VerticalAlignment="Center" Margin="10,0,10,0" Grid.Column="0" Grid.Row="2"/>
                             <Label Content="Computer Name" VerticalAlignment="Center" Grid.Column="1" Grid.Row="0"/>
                             <Label Content="IP Address" VerticalAlignment="Center" Grid.Column="2" Grid.Row="0"/>
-                            <TextBox Text="ANEXAMPLENAME" VerticalAlignment="Center" Margin="0,0,2,0" Grid.Column="1" Grid.Row="1"/>
-                            <TextBox VerticalAlignment="Center" Margin="0,0,2,0" Grid.Column="1" Grid.Row="2"/>
-                            <TextBox Text="192.168.234.244" VerticalAlignment="Center" Margin="2,0,0,0" Grid.Column="2" Grid.Row="1"/>
-                            <TextBox VerticalAlignment="Center" Margin="2,0,0,0" Grid.Column="2" Grid.Row="2"/>
-                            <Button Content="Test Connection" Margin="10,0,10,0" VerticalAlignment="Center" Grid.Column="3" Grid.Row="1"/>
-                            <CheckBox Content="Connected" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="2"/>
+                            <TextBox Name="OldComputerNameTextBox_OldPage" Text="" VerticalAlignment="Center" Margin="0,0,2,0" Grid.Column="1" Grid.Row="1"/>
+                            <TextBox Name="NewComputerNameTextBox_OldPage" VerticalAlignment="Center" Margin="0,0,2,0" Grid.Column="1" Grid.Row="2"/>
+                            <TextBox Name="OldComputerIPTextBox_OldPage" Text="" VerticalAlignment="Center" Margin="2,0,0,0" Grid.Column="2" Grid.Row="1"/>
+                            <TextBox Name="NewComputerIPTextBox_OldPage" VerticalAlignment="Center" Margin="2,0,0,0" Grid.Column="2" Grid.Row="2"/>
+                            <Button Name="TestConnectionButton_OldPage" Content="Test Connection" Margin="10,0,10,0" VerticalAlignment="Center" Grid.Column="3" Grid.Row="1"/>
+                            <CheckBox Name="ConnectionCheckBox_OldPage" Content="Connected" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="2"/>
                         </Grid>
                     </GroupBox>
                     <Grid Grid.Row="1">
@@ -104,7 +104,7 @@
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
                                     <CheckBox Content="Save On New Computer" Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0"/>
-                                    <TextBox Margin="10,0,10,0" TextWrapping="Wrap" Text="c:\Temp\MigrationStore" VerticalAlignment="Center" Grid.Row="1"/>
+                                    <TextBox Name="SaveDestinationTextBox"  Margin="10,0,10,0" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="1"/>
                                     <Grid Grid.Row="2">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*"/>
@@ -121,18 +121,18 @@
                                         <RowDefinition Height="*"/>
                                         <RowDefinition Height="2*"/>
                                     </Grid.RowDefinitions>
-                                    <Button Content="Button" Margin="10,0,10,0" VerticalAlignment="Center" Grid.Row="0"/>
+                                    <Button Name="SelectProfileButton" Content="Select Profile(s) to Migrate" Margin="10,0,10,0" VerticalAlignment="Center" Grid.Row="0"/>
                                     <Grid Grid.Row="1">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="5*"/>
                                             <ColumnDefinition Width="1*"/>
                                         </Grid.ColumnDefinitions>
-                                        <CheckBox Grid.Column="0" VerticalAlignment="Center" Margin="10,0,0,0">
+                                        <CheckBox Name="RecentProfilesCheckBox"  Grid.Column="0" VerticalAlignment="Center" Margin="10,0,0,0">
                                             <StackPanel>
                                                 <TextBlock TextWrapping="WrapWithOverflow">Migrate all profiles logged into within this amount of days:</TextBlock>
                                             </StackPanel>
                                         </CheckBox>
-                                        <TextBox Text="90" Margin="5,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1"/>
+                                        <TextBox Name="RecentProfilesDaysTextBox" Text="90" Margin="5,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1"/>
                                     </Grid>
                                 </Grid>
                             </GroupBox>
@@ -262,7 +262,4 @@
 
         </RichTextBox>
     </Grid>
-
-
 </Window>
-

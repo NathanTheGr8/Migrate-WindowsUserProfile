@@ -15,7 +15,9 @@ function Update-Log {
     $LogTextBox.ScrollToEnd()
 }
 
-function Get-IPAddress { (Test-Connection -ComputerName (hostname) -Count 1).IPV4Address.IPAddressToString }
+function Get-IPAddress {
+    (Test-Connection -ComputerName (hostname) -Count 1).IPV4Address.IPAddressToString
+}
 
 function Get-UserProfileLastLogin {
     param(
@@ -965,6 +967,7 @@ function Test-ComputerConnection {
     )
 
     $ConnectionCheckBox.Checked = $false
+    Update-Log "Testing yolo"  -Color 'Red'
 
     # Try and use the IP if the user filled that out, otherwise use the name
     if ($ComputerIPTextBox.Text -ne '') {
