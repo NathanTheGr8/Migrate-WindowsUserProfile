@@ -70,7 +70,7 @@ process {
     #Set Default Values
     $OldComputerNameTextBox_OldPage.Text = $env:COMPUTERNAME
     $OldComputerIPTextBox_OldPage.Text = Get-IPAddress
-    $ConnectionCheckBox_OldPage.Enabled = $false
+    ##$ConnectionCheckBox_OldPage.Enabled = $false
     $RecentProfilesDaysTextBox.Text = $DefaultRecentProfilesDays
     $RecentProfilesCheckBox.Checked = $DefaultRecentProfiles
     $SaveDestinationTextBox.Text = $MigrationStorePath
